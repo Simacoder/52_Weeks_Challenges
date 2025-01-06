@@ -9,10 +9,12 @@ The Project 52 is a personal challenge according to which I should make one proj
 52 weeks of code is where every week for 52 weeks you make a code-based project. They can be small - medium-sized projects, websites, extensions, apps, games, etc. Anything that lets you be creative and get your ideas out / practice your programming skills.
 
 # INTERESTS
-# Backend
-# Machine learning
-# DevOps
-# MLOps 
+- Backend
+- Machine learning
+- DevOps
+- MLOps 
+- Mathematics
+- Data Science
 
 # AUTHOR
 - Simanga Mchunu 
