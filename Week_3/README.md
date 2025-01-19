@@ -106,10 +106,10 @@ In today's data-driven world, organizations increasingly value data scientists w
 By completing this project, you'll enhance your skills as a **full-stack data scientist**, capable of engaging in all stages of the data science lifecycle.
 
 🤝 **Contributing**
-Contributions are welcome! Feel free to open an issue or submit a pull request to improve this project.
+- Contributions are welcome! Feel free to open an issue or submit a pull request to improve this project.
 
 📝 **License**
-This project is licensed under the MIT License. See the LICENSE file for more details.
+- This project is licensed under the MIT License. See the LICENSE file for more details.
 
 
 # AUTHOR
