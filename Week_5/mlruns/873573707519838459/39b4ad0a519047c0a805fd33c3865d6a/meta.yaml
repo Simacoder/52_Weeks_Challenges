@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/User/desktop/dirisa/52_weeks_challenges/week_5/mlruns/873573707519838459/39b4ad0a519047c0a805fd33c3865d6a/artifacts
+end_time: 1738423599508
+entry_point_name: ''
+experiment_id: '873573707519838459'
+lifecycle_stage: active
+run_id: 39b4ad0a519047c0a805fd33c3865d6a
+run_name: capricious-elk-31
+run_uuid: 39b4ad0a519047c0a805fd33c3865d6a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738423577084
+status: 4
+tags: []
+user_id: User
