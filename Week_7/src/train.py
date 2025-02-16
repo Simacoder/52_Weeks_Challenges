@@ -3,6 +3,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error
 import joblib
 import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 def train_model(data_path, model_path):
     df = pd.read_csv(data_path)
@@ -39,6 +41,45 @@ def train_model(data_path, model_path):
     # Save the model
     joblib.dump(model, model_path)
     print(f"Model saved at: {model_path}")
+
+
+
+    # Visualization of actual vs predicted sales
+    plt.figure(figsize=(10, 6))
+    sns.scatterplot(x=y_test, y=y_pred, alpha=0.6, edgecolor=None)
+    plt.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], '--', color='red', label="Perfect Prediction")
+    plt.xlabel("Actual Sales")
+    plt.ylabel("Predicted Sales")
+    plt.title("Actual vs Predicted Sales")
+    plt.legend()
+    plt.grid(True)
+    plt.show()
+
+    # Feature Importance Analysis
+    feature_importance = pd.Series(model.feature_importances_, index=X.columns).sort_values(ascending=False)
+
+    # Plot Feature Importance
+    plt.figure(figsize=(10, 5))
+    sns.barplot(x=feature_importance, y=feature_importance.index, palette="viridis")
+    plt.xlabel("Feature Importance Score")
+    plt.ylabel("Features")
+    plt.title("Feature Importance in Random Forest Model")
+    plt.show()
+
+
+    # Error Distribution Analysis
+    errors = y_test - y_pred
+
+    plt.figure(figsize=(10, 5))
+    sns.histplot(errors, bins=30, kde=True, color="blue", alpha=0.7)
+    plt.axvline(x=0, color='red', linestyle='--', label="Zero Error Line")
+    plt.xlabel("Prediction Error (Actual - Predicted)")
+    plt.ylabel("Frequency")
+    plt.title("Distribution of Prediction Errors")
+    plt.legend()
+    plt.show()
+
+
 
 if __name__ == "__main__":
     train_model('data/processed/cleaned_sales_data.csv', 'models/model.joblib')
