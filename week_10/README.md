@@ -1,9 +1,9 @@
-# Uber Fare Prediction System
+# Bolt Fare Prediction System
 
 ## Research by Simanga Mchunu, Machine Learning Engineer
 
 ### Problem Statement
-Uber passengers often face uncertainties regarding ride fares due to fluctuating factors such as distance, time of the ride, and traffic conditions. This project aims to build a machine learning model to accurately predict Uber ride fares based on historical ride data, improving cost transparency for passengers and optimizing pricing strategies for ride-hailing services.
+Bolt passengers often face uncertainties regarding ride fares due to fluctuating factors such as distance, time of the ride, and traffic conditions. This project aims to build a machine learning model to accurately predict Uber ride fares based on historical ride data, improving cost transparency for passengers and optimizing pricing strategies for ride-hailing services.
 
 ### Insights from the Data
 - **Ride Duration vs. Price:** Longer rides generally result in higher fares, but peak hours introduce additional pricing fluctuations.
