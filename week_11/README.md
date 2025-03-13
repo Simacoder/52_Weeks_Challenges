@@ -64,9 +64,7 @@ To build an effective Decision Tree, we need to assess how well a feature splits
 ### 1. **Gini Impurity** (Used in Classification)
 Gini impurity measures the impurity of a dataset. For a dataset \(D\), the Gini impurity is calculated as:
 
-\[
-Gini(D) = 1 - \sum_{i=1}^{n} p_i^2
-\]
+[Gini](gini.png)
 
 Where:
 - \(n\) is the number of classes
@@ -77,9 +75,7 @@ The lower the Gini value, the more "pure" the dataset is.
 ### 2. **Entropy** (Used in Classification)
 Entropy is another measure of impurity. It quantifies the uncertainty in the dataset:
 
-\[
-Entropy(D) = - \sum_{i=1}^{n} p_i \log_2(p_i)
-\]
+[Entropy](entropy.png)
 
 Where:
 - \(p_i\) is the proportion of data points in class \(i\)
@@ -89,9 +85,7 @@ Entropy reaches its maximum when the data is perfectly mixed between classes and
 ### 3. **Information Gain** (Used in Classification)
 Information Gain is a metric derived from entropy that tells us how much information we gain by splitting a dataset at a particular feature. It is calculated as:
 
-\[
-Information\_Gain(D, A) = Entropy(D) - \sum_{v \in Values(A)} \frac{|D_v|}{|D|} Entropy(D_v)
-\]
+[Entropy](entropy.png)
 
 Where:
 - \(D_v\) is the subset of data where feature \(A\) takes value \(v\)
@@ -130,6 +124,8 @@ A smaller MSE indicates a better split for regression tasks.
 ---
 
 **Conclusion**
+
+
 Decision Trees are a powerful tool for both classification and regression tasks, offering simplicity and interpretability. Understanding the key concepts, mathematical metrics like Gini impurity and entropy, and how to implement a Decision Tree in code are crucial for mastering this method. While they are straightforward to use, it’s important to be mindful of their potential for overfitting and instability. By controlling tree depth and other hyperparameters, you can build robust models that help in solving complex decision-making problems.
 
 With this knowledge in hand, you can apply Decision Trees to a wide range of real-world problems, from predicting customer churn to diagnosing diseases!
