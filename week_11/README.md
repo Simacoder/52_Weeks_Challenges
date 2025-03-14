@@ -96,9 +96,7 @@ The feature that maximizes Information Gain is chosen for the split.
 ### 4. **Mean Squared Error (MSE)** (Used in Regression)
 For regression tasks, the impurity measure is often **Mean Squared Error (MSE)**. MSE is calculated as:
 
-\[
-MSE(D) = \frac{1}{|D|} \sum_{i=1}^{|D|} (y_i - \hat{y})^2
-\]
+![Mean Squared Error](mean_squared_error.svg)
 
 Where:
 - \(y_i\) is the actual value for data point \(i\)
