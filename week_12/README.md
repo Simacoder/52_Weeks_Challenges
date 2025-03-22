@@ -71,9 +71,7 @@ pip install numpy scikit-learn
 ### **Anomaly Score Formula**:
 Once the Isolation Trees are built, the anomaly score is calculated using the formula:
 
-\[
-s(x) = 2^{-\frac{E(h(x))}{c(n)}}
-\]
+![anomaly score formula](anomaly.png)
 
 Where:
 - \( E(h(x)) \) is the expected path length to isolate point \( x \).
