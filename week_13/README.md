@@ -30,7 +30,7 @@ Whether you're learning algorithms or looking to implement efficient search rout
 
 6. Continue until the target is found or the range is empty.
 
-![process](mid.avif)
+![process](mid.png)
 
 #  Efficiency
 
