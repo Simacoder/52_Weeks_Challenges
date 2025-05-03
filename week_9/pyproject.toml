@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "efficient-trees"
+version = "0.1.0"
+description = "A memory-efficient implementation of decision trees."
+authors = ["Simanga Mchunu <simacode@hotmail.com"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+polars = "*"
+python = "^3.12"
+
+[tool.poetry.dev-dependencies]
+numpy = "*"
+scikit-learn = "*"
+lightgbm = "*"
+memory-profiler = "*"
+matplotlib = "*"
+kagglehub = "*"
+pytest = "*"
+pytest-cov = "*"
+flake8 = "7.1.1"
+black = "24.10.0"
+pre-commit = "*"
+isort = "*"
+pandas = "*"
+pyarrow = "*"
+cffi = "*"
+coverage-badge = "*"
+
+[tool.black]
+line-length = 120
+target-version = ["py312"]
+
+[tool.isort]
+profile = "black"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
