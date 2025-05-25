@@ -1,0 +1,9 @@
+Python 3.7+
+
+NumPy
+
+Pandas
+
+scikit-learn
+
+Matplotlib
