@@ -1,0 +1,84 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Iris Predictor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Inter, sans-serif; margin: 0; background: #f9fafb; color: #111827; }
+    header { background: #111827; color: white; padding: 1rem 2rem; text-align: center; }
+    header h1 { margin: 0; font-size: 1.6rem; }
+    nav { display: flex; justify-content: center; background: #1f2937; }
+    nav a { color: white; text-decoration: none; margin: 0 1rem; padding: 0.75rem 1rem; font-weight: 500; }
+    nav a:hover { background: #2563eb; border-radius: 6px; }
+    .container { max-width: 600px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+    .row { display: grid; gap: 1rem; grid-template-columns: 1fr 1fr; }
+    label { font-size: 0.9rem; color: #111827; }
+    input { width: 100%; padding: 0.5rem; border: 1px solid #d1d5db; border-radius: 8px; }
+    button { margin-top: 1rem; padding: 0.75rem 1rem; border: 0; border-radius: 8px; background: #2563eb; color: white; cursor: pointer; font-weight: 500; }
+    button:hover { background: #1e40af; }
+    .result { margin-top: 1rem; background: #f3f4f6; border-radius: 8px; padding: 1rem; }
+    .muted { color: #6b7280; }
+    h2 { text-align: center; margin-bottom: 1rem; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Machine Learning on Django with Simanga Mchunu</h1>
+</header>
+
+<nav>
+  <a href="{% url 'home' %}">Prediction</a>
+  <a href="{% url 'analysis' %}">Analysis</a>
+</nav>
+
+<div class="container">
+  <h2>Iris Predictor</h2>
+  <p class="muted" style="text-align:center;">Enter Iris flower measurements to get a prediction.</p>
+
+  <form action="/predict/" method="post">
+    {% csrf_token %}
+    <div class="row">
+      <div>
+        <label>Sepal length (cm)</label>
+        {{ form.sepal_length }}
+      </div>
+      <div>
+        <label>Sepal width (cm)</label>
+        {{ form.sepal_width }}
+      </div>
+      <div>
+        <label>Petal length (cm)</label>
+        {{ form.petal_length }}
+      </div>
+      <div>
+        <label>Petal width (cm)</label>
+        {{ form.petal_width }}
+      </div>
+    </div>
+    <button type="submit">Predict</button>
+  </form>
+
+  {% if submitted and result %}
+  <div class="result">
+    <strong>Predicted class:</strong> {{ result.class_name }}
+    <div class="muted">
+      Probabilities:
+      <ul>
+        {% for name, p in result.probabilities.items %}
+          <li>{{ name }}: {{ p|floatformat:3 }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  {% endif %}
+
+  <p class="muted" style="margin-top:1rem; text-align:center;">
+    API available at <code>POST /api/predict/</code>
+  </p>
+</div>
+
+</body>
+</html>
