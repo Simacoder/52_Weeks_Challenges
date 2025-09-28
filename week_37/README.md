@@ -149,7 +149,8 @@ Passionate about machine learning, Django development, and creating educational 
 
 This project is licensed under the MIT License – feel free to use and modify it.
 
-🌟 Acknowledgements
+# 🌟 Acknowledgements
+
 [scikit-learn](https://scikit-learn.org/stable/)– for the Iris dataset and ML utilities
 
 [Django](https://www.djangoproject.com/) – for the web framework
