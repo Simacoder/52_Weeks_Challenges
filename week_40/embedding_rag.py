@@ -10,7 +10,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 #  choose a local open-source model
 # smaller options: "microsoft/phi-2", "mistralai/Mistral-7B-Instruct-v0.2"
 # larger options need more VRAM (≥16GB)
-model_id = "mistralai/Mistral-7B-Instruct-v0.2"
+model_id = "microsoft/phi-2"
 
 #  initialize Hugging Face LLM
 print("Loading model... (this may take a minute)")
