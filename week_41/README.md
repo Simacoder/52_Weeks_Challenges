@@ -191,7 +191,7 @@ pip install -r requirements.txt
 ## 🏁 Conclusion
 
 That’s it! 🎉
-You’ve built a mini deep learning framework with:
+You’ve built a **mini deep learning framework** with:
 
 - GPU acceleration
 
