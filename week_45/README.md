@@ -2,7 +2,6 @@
 
 ## The Math Behind Fitting a Plane Instead of a Line
 
-Photo by Ortega Castro 🇲🇽 on Unsplash
 
 ---
 
