@@ -1,0 +1,1 @@
+<annotation><filename>image_val_000.jpg</filename><size><width>480</width><height>640</height><depth>3</depth></size><object><name>sheep</name><bndbox><xmin>197</xmin><ymin>458</ymin><xmax>317</xmax><ymax>511</ymax></bndbox></object><object><name>car</name><bndbox><xmin>155</xmin><ymin>251</ymin><xmax>205</xmax><ymax>394</ymax></bndbox></object></annotation>
